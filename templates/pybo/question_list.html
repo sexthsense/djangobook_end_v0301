@@ -6,8 +6,8 @@
         <div class="col-2">
             <select class="form-control so">
                 <option value="recent" {% if so == 'recent' %}selected{% endif %}>최신순</option>
-                <option value="recommend" {% if so == 'recommend' %}selected{% endif %}>추천순</option>
-                <option value="popular" {% if so == 'popular' %}selected{% endif %}>인기순</option>
+                <option value="recommend" {% if so == 'recommend' %}selected{% endif %}>확인순</option>
+                <option value="popular" {% if so == 'popular' %}selected{% endif %}>조회순</option>
             </select>
         </div>
         <div class="col-4 input-group">
@@ -21,10 +21,10 @@
         <thead>
         <tr class="text-center thead-dark">
             <th>번호</th>
-            <th>추천</th>
-            <th style="width:50%">제목</th>
-            <th>글쓴이</th>
-            <th>작성일시</th>
+            <th>확인</th>
+            <th style="width:50%">휴가 희망일</th>
+            <th>작성자</th>
+            <th>등록일시</th>
         </tr>
         </thead>
         <tbody>
@@ -95,7 +95,7 @@
         {% endif %}
     </ul>
     <!-- 페이징처리 끝 -->
-    <a href="{% url 'pybo:question_create' %}" class="btn btn-primary">질문 등록하기</a>
+    <a href="{% url 'pybo:question_create' %}" class="btn btn-primary">휴가 신청하기</a>
 </div>
 <form id="searchForm" method="get" action="{% url 'index' %}">
     <input type="hidden" id="kw" name="kw" value="{{ kw|default_if_none:'' }}">

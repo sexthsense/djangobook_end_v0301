@@ -20,10 +20,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'ls&1oied3t*np!^y6664m!j2-l%ie=8g$w-bjk_pjryzd#3y6b'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+#originas
 DEBUG = True
+#DEBUG = False
 
-ALLOWED_HOSTS = []
+# 동일 네트워크에서 공유시
+ALLOWED_HOSTS = ['*']
 
+# 기본 설정
+#ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -124,3 +129,5 @@ LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
 DEFAULT_AUTO_FIELD='django.db.models.AutoField'
+
+DATE_INPUT_FORMATS = ['%d-%m-%y'] #날짜값 받기위해 추가 0228
