@@ -18,7 +18,7 @@
         {% endif %}
         <!-- 오류표시 End -->
         <div class="form-group">
-            <label for="subject">희망날짜</label>
+            <label for="subject">희망날짜<br> * warning!! - Employees apply for different vacation days. </label>
             <!--
             <input type="text" class="form-control" name="subject" id="subject" -->
             <input type="date" class="form-control" name="subject" id="subject"
@@ -27,7 +27,7 @@
         <div class="form-group">
             <label for="content">사유 및 내용</label>
             <textarea class="form-control" name="content"
-                      id="content" rows="5">{{ form.content.value|default_if_none:'' }}</textarea>
+                      id="content" rows="3">{{ form.content.value|default_if_none:'' }}</textarea>
         </div>
         <button type="submit" class="btn btn-primary">저장하기</button>
     </form>

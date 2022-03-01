@@ -24,8 +24,8 @@ SECRET_KEY = 'ls&1oied3t*np!^y6664m!j2-l%ie=8g$w-bjk_pjryzd#3y6b'
 DEBUG = True
 #DEBUG = False
 
-# 동일 네트워크에서 공유시
-ALLOWED_HOSTS = ['*']
+# 동일 네트워크에서 공유시 http://220.82.139.83:8000/
+ALLOWED_HOSTS = ['220.82.139.83']
 
 # 기본 설정
 #ALLOWED_HOSTS = []

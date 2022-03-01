@@ -22,9 +22,9 @@
         <tr class="text-center thead-dark">
             <th>번호</th>
             <th>확인</th>
-            <th style="width:50%">휴가 희망일</th>
+            <th>휴가일</th>
             <th>작성자</th>
-            <th>등록일시</th>
+            <th>작성일</th>
         </tr>
         </thead>
         <tbody>
@@ -40,14 +40,14 @@
                 <span class="badge badge-warning px-2 py-1">{{ question.voter.all.count }}</span>
                 {% endif %}
             </td>
-            <td class="text-left">
+            <td class="text-center">
                 <a href="{% url 'pybo:detail' question.id %}">{{ question.subject }}</a>
                 {% if question.answer_set.count > 0 %}
                 <span class="text-danger small ml-2">{{ question.answer_set.count }}</span>
                 {% endif %}
             </td>
             <td>{{ question.author.username }}</td>  <!-- 글쓴이 추가 -->
-            <td>{{ question.create_date }}</td>
+            <td>{{ question.create_date|date }}</td>
         </tr>
         {% endfor %}
         {% else %}
